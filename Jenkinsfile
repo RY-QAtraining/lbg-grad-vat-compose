@@ -7,7 +7,7 @@ pipeline{
    stage("checkout"){
      steps{
       script{
-       sh 'docker-compose -f <docker-compose.yml> logs' 
+      git branch:'main', url: 'https://github.com/RY-QAtraining/lbg-grad-vat-compose.git'
       }}
    }
     stage('run '){
