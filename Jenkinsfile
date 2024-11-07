@@ -13,7 +13,7 @@ pipeline{
     stage('run '){
      steps{
       script{
-       sh 'docker-compose -f <docker-compose.yml> logs' 
+       sh 'docker-compose -f <docker-compose.yaml> logs' 
       }
       script{
       sh 'ssh jenkins@35.210.188.186 docker-compose up -d --build'}
