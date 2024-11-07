@@ -5,7 +5,10 @@ pipeline{
     agent any
   stages{
    stage("checkout"){
-    
+     steps{
+      script{
+       sh 'docker-compose -f <docker-compose.yml> logs' 
+      }}
    }
     stage('run '){
      steps{
