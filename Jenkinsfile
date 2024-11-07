@@ -8,7 +8,8 @@ pipeline{
      steps{
       script{
       git branch:'main', url: 'https://github.com/RY-QAtraining/lbg-grad-vat-compose.git'
-      }}
+      }
+     }
    }
     stage('run '){
      steps{
@@ -16,5 +17,6 @@ pipeline{
        sh 'ssh jenkins@35.210.188.186 docker compose -f docker-compose.yaml up -d --build' 
       }
   }
+}
 }
 }
