@@ -7,7 +7,7 @@ pipeline{
     stage('run using docker-compose file'){
      steps{
       script{
-      sh 'ssh jenkins@35.210.188.186 docker compose up -d --build'}
+      sh 'ssh jenkins@35.210.188.186 docker-compose up -d --build'}
     }
   }
 }
